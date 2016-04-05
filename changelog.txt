@@ -18,3 +18,4 @@ DD/MM/YY @ hh:mm - Change Description (INITIAL)
 
 05/04/16 @ 14:41 - Binded xsl to the xml (CS)
 05/04/16 @ 14:45 - Created day-schedule.xsl (JL)
+05/04/16 @ 14:52 - commented day-schedule.xsl (RD)
