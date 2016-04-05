@@ -12,3 +12,5 @@ DD/MM/YY @ hh:mm - Change Description (INITIAL)
 29/03/16 @ 13:48 - Created schema validation of xml (RD)
 
 31/03/16 @ 15:07 - Created a schedule-day.xsl (CS)
+
+05/04/16 @ 14:41 - Binded xsl to the xml (CS)
