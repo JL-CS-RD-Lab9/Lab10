@@ -33,7 +33,7 @@
             </body>
         </html>
     </xsl:template>
-    
+    <!--List times during the day -->
     <xsl:template name = "times">
         <table>
             <tr>                
@@ -48,7 +48,7 @@
             </tr>            
         </table>
     </xsl:template>
-    
+    <!-- Template for days data -->
     <xsl:template name="daysData">
  	<xsl:for-each select="days/day">
            <tr>
@@ -114,7 +114,7 @@
              </tr>
         </xsl:for-each>
     </xsl:template>
-    
+    <!-- Template for period data -->
     <xsl:template match="period">
  	<xsl:value-of select="./code"/>
  	<xsl:value-of select="./room"/>
