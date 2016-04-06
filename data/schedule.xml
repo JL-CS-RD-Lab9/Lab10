@@ -2,8 +2,10 @@
 <?xml-stylesheet type='text/xsl' href='schedule-period.xsl'?>
 <schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="schedule.xsd">
-	
+	<!-- Timetable grouped by daySlot -->
 	<dayslot which="Monday">
+            
+            <!-- booking grouped by period -->
 		<period start="1030" end="1220">
 			<booking code="ACIT4650" coursename="Content Mananagement Systems Administration" 
                                  instructor="Medhat Elmasry" room="SE12-306" type="Lab"/>
