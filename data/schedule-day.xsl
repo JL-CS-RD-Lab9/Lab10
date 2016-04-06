@@ -9,7 +9,7 @@
             </head>
             <body>
                 <h1>ACIT Winter 2016 Schedule - Day Centric</h1>
-                <table>
+                <table border="1">
                     <xsl:call-template name="headings"/>                    
                 </table>
             </body>
@@ -18,7 +18,7 @@
     
     <!-- Day Headings -->
     <xsl:template name="headings">
-        <tr>
+        <tr bgcolor="#d3d3d3">
             <th>Period</th>
             <xsl:for-each select="schedule/dayslot">
                 <th>
@@ -33,21 +33,23 @@
     
     <!-- Period Times -->
     <xsl:template name="periods">
-        <tr>
-            <td>830</td>
+        <tr >
+            <td bgcolor="#d3d3d3">830</td>
             <td>
                 <xsl:for-each select="schedule/dayslot">
                     <xsl:if test="./@which='Monday'">
-                        <xsl:if test="./period/@start='0830'">
-                            <xsl:apply-templates select="."/>
-                        </xsl:if>
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0830'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
             </td> 
             <td>
                 <xsl:for-each select="schedule/dayslot">
                     <xsl:if test="./@which='Tuesday'">
-                        <xsl:for-each select="schedule/dayslot/period">
+                        <xsl:for-each select="./period">
                             <xsl:if test="./@start='0830'">
                                 <xsl:apply-templates select="."/>
                             </xsl:if>
@@ -58,54 +60,500 @@
             <td>
                 <xsl:for-each select="schedule/dayslot">
                     <xsl:if test="./@which='Wednesday'">
-                        <xsl:if test="./period/@start='0830'">
-                            <xsl:apply-templates select="."/>
-                        </xsl:if>
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0830'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
             </td> 
             <td>
                 <xsl:for-each select="schedule/dayslot">
                     <xsl:if test="./@which='Thursday'">
-                        <xsl:if test="./period/@start='0830'">
-                            <xsl:apply-templates select="."/>
-                        </xsl:if>
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0830'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
             </td> 
             <td>
                 <xsl:for-each select="schedule/dayslot">
                     <xsl:if test="./@which='Friday'">
-                        <xsl:if test="./period/@start='0830'">
-                            <xsl:apply-templates select="."/>
-                        </xsl:if>
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0830'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
                     </xsl:if>
                 </xsl:for-each>
             </td>            
         </tr>
         <tr>
-            <td>930</td>
+            <td bgcolor="#d3d3d3">930</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0930'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0930'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0930'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0930'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='0930'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1030</td>
+            <td bgcolor="#d3d3d3">1030</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1030'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1030'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1030'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1030'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1030'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1130</td>
+            <td bgcolor="#d3d3d3">1130</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1130'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1130'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1130'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1130'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1130'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1230</td>
+            <td bgcolor="#d3d3d3">1230</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1230'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1230'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1230'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1230'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1230'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1330</td>
+            <td bgcolor="#d3d3d3">1330</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1330'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1330'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1330'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1330'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1330'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1430</td>
+            <td bgcolor="#d3d3d3">1430</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1430'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1430'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1430'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1430'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1430'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1530</td>
+            <td bgcolor="#d3d3d3">1530</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1530'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1530'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1530'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1530'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1530'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>
         <tr>
-            <td>1630</td>
+            <td bgcolor="#d3d3d3">1630</td>
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Monday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1630'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Tuesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1630'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Wednesday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1630'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Thursday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1630'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td> 
+            <td>
+                <xsl:for-each select="schedule/dayslot">
+                    <xsl:if test="./@which='Friday'">
+                        <xsl:for-each select="./period">
+                            <xsl:if test="./@start='1630'">
+                                <xsl:apply-templates select="."/>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </xsl:if>
+                </xsl:for-each>
+            </td>
         </tr>        
     </xsl:template>
     
@@ -120,5 +568,8 @@
         <xsl:value-of select="./booking/@room"/>
         <br/>
         <xsl:value-of select="./booking/@type"/>
+        <br/>
+        <xsl:value-of select="./@start"/>-<xsl:value-of select="./@end"/>
+        <br/>
     </xsl:template>
 </xsl:stylesheet>
